@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
+# F-Droid
+PRODUCT_PACKAGES += \
+    F-DroidPrivilegedExtension
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
