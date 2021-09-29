@@ -67,3 +67,6 @@ wifi.interface=wlan0
 
 # Wifi Display
 persist.hwc.enable_vds=1
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
