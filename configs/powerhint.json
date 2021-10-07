@@ -229,7 +229,7 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "UfsHibern8Enable",
-      "Duration": 200,
+      "Duration": 0,
       "Value": "0"
     },
     {
