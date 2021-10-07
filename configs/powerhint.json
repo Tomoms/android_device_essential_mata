@@ -154,15 +154,6 @@
         ""
       ],
       "Type": "Property"
-    },
-    {
-      "Name": "UfsHibern8Enable",
-      "Path": "/sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -227,12 +218,6 @@
       "Value": "5195"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "UfsHibern8Enable",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 5000,
@@ -281,12 +266,6 @@
       "Value": "13763"
     },
     {
-      "PowerHint": "LAUNCH",
-      "Node": "UfsHibern8Enable",
-      "Duration": 5000,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 1000,
@@ -309,12 +288,6 @@
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 1000,
       "Value": "2c"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "UfsHibern8Enable",
-      "Duration": 1000,
-      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING",
