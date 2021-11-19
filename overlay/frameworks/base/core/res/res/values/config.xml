@@ -386,4 +386,6 @@
     <!-- Specify if the fingerprint hardware support gestures-->
     <bool name="config_fingerprintSupportsGestures">true</bool>
 
+    <string translatable="false" name="config_networkCaptivePortalServerUrl">http://captiveportal.kuketz.de</string>
+
 </resources>
