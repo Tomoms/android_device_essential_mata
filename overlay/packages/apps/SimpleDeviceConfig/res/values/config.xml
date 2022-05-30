@@ -20,6 +20,9 @@
 
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
+
+        <!-- Keep up to 7 days of permission usage history -->
+        <item>privacy/discrete_history_cutoff_millis=604800000</item>
     </string-array>
 
 </resources>
