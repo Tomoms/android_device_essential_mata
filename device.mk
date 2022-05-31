@@ -348,10 +348,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor
 
-# Sandboxed Google Play
-PRODUCT_PACKAGES += \
-    GmsCompat
-
 # Seccomp
 PRODUCT_COPY_FILES += \
     device/essential/mata/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
