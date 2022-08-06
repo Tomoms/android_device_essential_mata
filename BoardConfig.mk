@@ -61,6 +61,9 @@ QCOM_BT_USE_BTNV := true
 # Camera
 USE_CAMERA_STUB := true
 
+# Debugging
+USE_DEX2OAT_DEBUG := false
+
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_DISPLAY_SHIFT_HORIZONTAL := 64
