@@ -25,6 +25,9 @@ debug.sf.enable_hwc_vds=1
 # Factory reset partition
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
+# IORap app launch prefetching using Perfetto traces and madvise
+iorapd.readahead.enable=true
+
 # Logging
 persist.log.tag.improveTouch=WARNING
 persist.log.tag.ThermalEngine=WARNING
