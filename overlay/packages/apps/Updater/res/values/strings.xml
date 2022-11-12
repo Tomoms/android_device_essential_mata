@@ -23,5 +23,7 @@
           {incr} - Incremental version
     -->
     <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Tomoms/OTA_Updates/s-mata/update.json</string>
+    <string name="updater_server_url_beta" translatable="false">https://raw.githubusercontent.com/Tomoms/OTA_Updates/s-mata-beta/update.json</string>
+    <string name="menu_changelog_url" translatable="false">https://forum.xda-developers.com/t/rom-s-mata-unofficial-optimized-lineageos-19-1-november-9th.4344275/post-87700909</string>
 
 </resources>
