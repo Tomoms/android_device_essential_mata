@@ -97,6 +97,15 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/essential/msm8998
 TARGET_KERNEL_CONFIG := lineageos_mata_defconfig
+TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1
+KERNEL_SUPPORTS_LLVM_TOOLS := true
+KERNEL_LD := LD=ld.lld
+TARGET_KERNEL_CLANG_PATH := /mnt/data/android/atom-x-clang
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+KERNEL_TOOLCHAIN := /mnt/data/android/atom-x-clang/bin
+KERNEL_TOOLCHAIN_arm := /mnt/data/android/atom-x-clang/bin
+KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-gnueabi-
+CLANG_PREBUILTS := /mnt/data/android/atom-x-clang
 
 # Kernel additional flags
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
