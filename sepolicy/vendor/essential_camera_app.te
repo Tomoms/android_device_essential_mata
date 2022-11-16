@@ -1,4 +1,5 @@
 type essential_camera_app, domain, coredomain;
+permissive essential_camera_app;
 
 app_domain(essential_camera_app)
 net_domain(essential_camera_app)
