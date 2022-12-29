@@ -46,3 +46,5 @@
 # data
 /data/vendor/misc/audio/acdbdata/delta(/.*)?                  u:object_r:acdbdelta_vendor_data_file:s0
 /data/connectivity(/.*)?                                      u:object_r:cnd_data_file:s0
+
+/(system/vendor|vendor)/bin/timekeep                          u:object_r:timekeep_exec:s0
