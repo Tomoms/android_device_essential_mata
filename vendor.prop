@@ -94,7 +94,15 @@ persist.vendor.bluetooth.a4wp=false
 # Camera
 persist.camera.expose.aux=1
 persist.camera.max.previewfps=60
+persist.camera.global.debug=0
+persist.camera.hal.debug=0
+persist.camera.kpi.debug=0
+persist.camera.stats.debug.mask=0
+persist.camera.bokeh.debug=0
+persist.camera.avtimer.debug=0
+persist.camera.perfd.enable=false
 vidc.enc.dcvs.extra-buff-count=2
+log.tag.mm-camera=ERROR
 
 # Charger
 ro.charger.enable_suspend=true
