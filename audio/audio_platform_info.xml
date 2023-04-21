@@ -44,7 +44,20 @@
         <device name="SND_DEVICE_OUT_VOICE_HANDSET_TMUS" acdb_id="7"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC_TMUS" acdb_id="41"/>
         <device name="SND_DEVICE_IN_SPEAKER_DMIC_STEREO" acdb_id="4"/>
+        <!-- We use qmic devices but with tmic ids, as in stock -->
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_QMIC" acdb_id="19"/>
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_AEC" acdb_id="19"/>
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_AEC_NS" acdb_id="19"/>
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_NS" acdb_id="19"/>
+        <device name="SND_DEVICE_IN_HANDSET_QMIC" acdb_id="41"/>
     </acdb_ids>
+    <device_names>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_QMIC" alias="three-mic" />
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_AEC" alias="three-mic" />
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_AEC_NS" alias="three-mic" />
+        <device name="SND_DEVICE_IN_SPEAKER_QMIC_NS" alias="three-mic" />
+        <device name="SND_DEVICE_IN_HANDSET_QMIC" alias="voice-dmic-ef" />
+    </device_names>
     <bit_width_configs>
         <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
     </bit_width_configs>
