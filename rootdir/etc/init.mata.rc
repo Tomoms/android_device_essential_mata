@@ -104,6 +104,10 @@ on init
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
 
+    # Set boottime stune value
+    write /dev/stune/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.boost 100
+
     # Set up schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 10
@@ -584,6 +588,10 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.mata
+
+    # Set runtime stune value
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/background/cpus 0-1
