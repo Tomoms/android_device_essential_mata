@@ -338,9 +338,6 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    # Set aggressive read ahead for dm-0 during boot up
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-
     start vendor.qti
     start vendor.netmgrd
 
@@ -599,9 +596,6 @@ on property:sys.boot_completed=1
     write /dev/cpuset/camera-daemon/cpus 0-3
 
     write /dev/kmsg "Boot completed"
-
-    # Reset read ahead for dm-0 to 512kb
-    write /sys/block/dm-0/queue/read_ahead_kb 512
 
     # WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
