@@ -104,6 +104,11 @@ on init
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
 
+    # Set up schedtune
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
     # disable thermal hotplug for configuration
     write /sys/module/msm_thermal/core_control/enabled 0
 
@@ -126,15 +131,6 @@ on init
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 20000
-
-    # Set boottime stune value
-    write /dev/stune/schedtune.prefer_idle 1
-    write /dev/stune/schedtune.boost 100
-
-    # set default schedTune value for foreground/top-app
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
-    write /dev/stune/top-app/schedtune.prefer_idle 1
 
     # enable thermal hotplug
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -192,7 +188,7 @@ on init
     write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/governor cpufreq
 
     # Setup permission for powerHAL
-    chown root root /dev/stune/top-app/schedtune.boost
+    chown system system /dev/stune/top-app/schedtune.boost
 
     chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
     chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
@@ -582,10 +578,6 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.mata
-
-    # Set runtime stune value
-    write /dev/stune/schedtune.prefer_idle 0
-    write /dev/stune/schedtune.boost 0
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/background/cpus 0-1
