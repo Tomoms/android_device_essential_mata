@@ -32,62 +32,6 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
-    mount_all /vendor/etc/fstab.persist --early
-
-    mkdir /mnt/vendor/persist/battery 0700 system system
-    mkdir /mnt/vendor/persist/data 0700 system system
-    mkdir /mnt/vendor/persist/display 0770 system graphics
-    mkdir /mnt/vendor/persist/rfs 0770 root system
-    mkdir /mnt/vendor/persist/hlos_rfs 0770 root system
-    chmod 0770 /mnt/vendor/persist/rfs
-    chmod 0770 /mnt/vendor/persist/rfs/shared
-    chown system system /mnt/vendor/persist/rfs/shared
-    chmod 0770 /mnt/vendor/persist/rfs/msm
-    chown system system /mnt/vendor/persist/rfs/msm
-    chmod 0770 /mnt/vendor/persist/rfs/msm/adsp
-    chown system system /mnt/vendor/persist/rfs/msm/adsp
-    chmod 0770 /mnt/vendor/persist/rfs/msm/mpss
-    chown system system /mnt/vendor/persist/rfs/msm/mpss
-    mkdir /mnt/vendor/persist/rfs/msm/slpi 0770 system system
-    chmod 0770 /mnt/vendor/persist/rfs/mdm
-    chown system system /mnt/vendor/persist/rfs/mdm
-    chmod 0770 /mnt/vendor/persist/rfs/mdm/adsp
-    chown system system /mnt/vendor/persist/rfs/mdm/adsp
-    chmod 0770 /mnt/vendor/persist/rfs/mdm/mpss
-    chown system system /mnt/vendor/persist/rfs/mdm/mpss
-    mkdir /mnt/vendor/persist/rfs/mdm/slpi 0770 system system
-    chmod 0770 /mnt/vendor/persist/rfs/mdm/sparrow
-    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
-    mkdir /mnt/vendor/persist/rfs/mdm/tn 0770 system system
-    chown system system /mnt/vendor/persist/rfs/apq
-    chmod 0770 /mnt/vendor/persist/rfs/apq
-    chown system system /mnt/vendor/persist/rfs/apq/gnss
-    chmod 0770 /mnt/vendor/persist/rfs/apq/gnss
-    chmod 0770 /mnt/vendor/persist/hlos_rfs
-
-    restorecon_recursive /mnt/vendor/persist
-    chown system system /mnt/vendor/persist/rfs/shared
-    chown system system /mnt/vendor/persist/rfs/msm
-    chown system system /mnt/vendor/persist/rfs/msm/adsp
-    chown system system /mnt/vendor/persist/rfs/msm/mpss
-    chown system system /mnt/vendor/persist/rfs/msm/slpi
-    chown system system /mnt/vendor/persist/rfs/mdm
-    chown system system /mnt/vendor/persist/rfs/mdm/adsp
-    chown system system /mnt/vendor/persist/rfs/mdm/mpss
-    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
-    chown system system /mnt/vendor/persist/rfs/mdm/tn
-    chown system system /mnt/vendor/persist/rfs/apq
-    chown system system /mnt/vendor/persist/rfs/apq/gnss
-
-    # Setup sensors-related directories and permissions
-    mkdir /mnt/vendor/persist/sensors 0775
-    chown root system /mnt/vendor/persist/sensors
-    write /mnt/vendor/persist/sensors/sensors_settings 1
-    chown root system /mnt/vendor/persist/sensors/sensors_settings
-    chmod 664 /mnt/vendor/persist/sensors/sensors_settings
-    chown root system /mnt/vendor/persist/sensors/sns.reg
-    chmod 664 /mnt/vendor/persist/sensors/sns.reg
-
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
@@ -221,6 +165,60 @@ on init
 
 on fs
     mount_all /vendor/etc/fstab.mata --early
+
+    mkdir /mnt/vendor/persist/battery 0700 system system
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/display 0770 system graphics
+    mkdir /mnt/vendor/persist/rfs 0770 root system
+    mkdir /mnt/vendor/persist/hlos_rfs 0770 root system
+    chmod 0770 /mnt/vendor/persist/rfs
+    chmod 0770 /mnt/vendor/persist/rfs/shared
+    chown system system /mnt/vendor/persist/rfs/shared
+    chmod 0770 /mnt/vendor/persist/rfs/msm
+    chown system system /mnt/vendor/persist/rfs/msm
+    chmod 0770 /mnt/vendor/persist/rfs/msm/adsp
+    chown system system /mnt/vendor/persist/rfs/msm/adsp
+    chmod 0770 /mnt/vendor/persist/rfs/msm/mpss
+    chown system system /mnt/vendor/persist/rfs/msm/mpss
+    mkdir /mnt/vendor/persist/rfs/msm/slpi 0770 system system
+    chmod 0770 /mnt/vendor/persist/rfs/mdm
+    chown system system /mnt/vendor/persist/rfs/mdm
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/adsp
+    chown system system /mnt/vendor/persist/rfs/mdm/adsp
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/mpss
+    chown system system /mnt/vendor/persist/rfs/mdm/mpss
+    mkdir /mnt/vendor/persist/rfs/mdm/slpi 0770 system system
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/sparrow
+    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
+    mkdir /mnt/vendor/persist/rfs/mdm/tn 0770 system system
+    chown system system /mnt/vendor/persist/rfs/apq
+    chmod 0770 /mnt/vendor/persist/rfs/apq
+    chown system system /mnt/vendor/persist/rfs/apq/gnss
+    chmod 0770 /mnt/vendor/persist/rfs/apq/gnss
+    chmod 0770 /mnt/vendor/persist/hlos_rfs
+
+    restorecon_recursive /mnt/vendor/persist
+    chown system system /mnt/vendor/persist/rfs/shared
+    chown system system /mnt/vendor/persist/rfs/msm
+    chown system system /mnt/vendor/persist/rfs/msm/adsp
+    chown system system /mnt/vendor/persist/rfs/msm/mpss
+    chown system system /mnt/vendor/persist/rfs/msm/slpi
+    chown system system /mnt/vendor/persist/rfs/mdm
+    chown system system /mnt/vendor/persist/rfs/mdm/adsp
+    chown system system /mnt/vendor/persist/rfs/mdm/mpss
+    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
+    chown system system /mnt/vendor/persist/rfs/mdm/tn
+    chown system system /mnt/vendor/persist/rfs/apq
+    chown system system /mnt/vendor/persist/rfs/apq/gnss
+
+    # Setup sensors-related directories and permissions
+    mkdir /mnt/vendor/persist/sensors 0775
+    chown root system /mnt/vendor/persist/sensors
+    write /mnt/vendor/persist/sensors/sensors_settings 1
+    chown root system /mnt/vendor/persist/sensors/sensors_settings
+    chmod 664 /mnt/vendor/persist/sensors/sensors_settings
+    chown root system /mnt/vendor/persist/sensors/sns.reg
+    chmod 664 /mnt/vendor/persist/sensors/sns.reg
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
