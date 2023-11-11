@@ -44,10 +44,6 @@ on init
     wait /dev/block/platform/soc/1da4000.ufshc
     symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
 
-    # start qseecomd early as we mount system/ vendor/ early
-    # vold needs keymaster that needs qseecomd
-    start vendor.qseecomd
-
     # Set up schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 10
@@ -219,6 +215,8 @@ on fs
     chmod 664 /mnt/vendor/persist/sensors/sensors_settings
     chown root system /mnt/vendor/persist/sensors/sns.reg
     chmod 664 /mnt/vendor/persist/sensors/sns.reg
+    
+    start vendor.qseecomd
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
