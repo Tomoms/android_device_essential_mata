@@ -9,3 +9,5 @@ binder_call(system_app, hal_sidecar_essential_default)
 binder_call(system_app, update_engine)
 r_dir_file(system_app, proc_pagetypeinfo)
 r_dir_file(system_app, sysfs_zram)
+allow system_app hal_thermal_default:binder call;
+allow system_app hal_vibrator_default:binder call;
