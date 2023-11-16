@@ -21,7 +21,6 @@ vendor.audio.offload.multiple.enabled=false
 vendor.voice.dsd.playback.conc.disabled=true
 persist.vendor.audio.sva.conc.enabled=false
 persist.vendor.audio.va_concurrency_enabled=false
-vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=false
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=false
