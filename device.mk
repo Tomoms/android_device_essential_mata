@@ -353,8 +353,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0.vendor \
     android.hardware.radio.config@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    android.hardware.secure_element@1.2.vendor 
 
 # Seccomp
 PRODUCT_COPY_FILES += \
