@@ -275,10 +275,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
-    # Create netmgr log dir
-    mkdir /data/vendor/netmgr 0770 radio radio
-    chmod 0770 /data/vendor/netmgr
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 system system
     chown system system /data/vendor/connectivity
@@ -325,7 +321,6 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    start vendor.qti
     start vendor.netmgrd
 
     chown system system /sys/devices/soc/soc:fpc,fpc1020/irq
@@ -399,9 +394,6 @@ on boot
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/report 0770 shell shell
 
-    # Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
-
     # Define TCP buffer sizes for various networks
     # ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
@@ -426,11 +418,6 @@ on boot
     setprop net.tcp.buffersize.evdo    4094,87380,524288,4096,16384,262144
 
     setprop net.tcp.2g_init_rwnd 10
-
-    # Assign TCP buffer thresholds to be ceiling value of technology maximums
-    # Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  8388608
-    write /proc/sys/net/core/wmem_max  8388608
 
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
@@ -505,6 +492,9 @@ on boot
 
     # Adjust permission for Sidecar
     chown system shell /sys/class/sidecar/power_control
+
+    start vendor.qcrild
+    start vendor.qcrild2
 
 on charger
     setprop persist.sys.usb.config mass_storage
@@ -592,7 +582,6 @@ on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
 on property:vold.decrypt=trigger_restart_framework
-    start vendor.qti
     start vendor.netmgrd
     start vendor.wcnss-service
 
@@ -665,39 +654,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group system wakelock
     task_profiles ServiceCapacityLow
 
-service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
-    class main
-    user system
-    group radio diag inet log
-    task_profiles ServiceCapacityLow
-
-service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
-    disabled
-    task_profiles ServiceCapacityLow
-
-service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-    task_profiles ServiceCapacityLow
-
-service vendor.imsrcsservice /vendor/bin/imsrcsd
-    class hal
-    user system
-    group radio diag inet log
-    task_profiles ServiceCapacityLow
-
-on property:vendor.ims.QMI_DAEMON_STATUS=1
-    start vendor.imsdatadaemon
-
-on property:vendor.ims.DATA_DAEMON_STATUS=1
-    restart vendor.ims_rtp_daemon
-
 service vendor.ipastart_sh /vendor/bin/init.qcom.ipastart.sh
     class main
     user radio
@@ -725,11 +681,6 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
-    task_profiles ServiceCapacityLow
-
-service vendor.netmgrd /vendor/bin/netmgrd
-    class main
-    disabled
     task_profiles ServiceCapacityLow
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
@@ -777,19 +728,6 @@ service vendor.qseecomd /vendor/bin/qseecomd
     user root
     group root
 
-service vendor.qti /vendor/bin/qti
-    class main
-    user radio
-    group radio net_raw diag usb net_admin
-    disabled
-    task_profiles ServiceCapacityLow
-
-service vendor.rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    shutdown critical
-    ioprio rt 0
-
 service vendor.sensors /vendor/bin/sensors.qcom
     class core
     user system
@@ -818,11 +756,6 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
     socket thermal-recv-passive-client stream 0666 system system
     socket thermal-send-rule stream 0660 system system
     group root
-
-service vendor.tftp_server /vendor/bin/tftp_server
-    class core
-    user root
-    group root system
 
 service update_neko /system/bin/fastboot_target update /data/ota_package/update_neko.zip
     class main
