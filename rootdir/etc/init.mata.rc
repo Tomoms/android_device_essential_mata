@@ -321,8 +321,6 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    start vendor.netmgrd
-
     chown system system /sys/devices/soc/soc:fpc,fpc1020/irq
     chown system system /sys/devices/soc/soc:fpc,fpc1020/wakeup_enable
     chown system system /sys/devices/soc/soc:fpc,fpc1020/hw_reset
@@ -582,7 +580,6 @@ on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
 on property:vold.decrypt=trigger_restart_framework
-    start vendor.netmgrd
     start vendor.wcnss-service
 
 # Services begin here
