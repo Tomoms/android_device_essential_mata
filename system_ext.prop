@@ -36,7 +36,6 @@ persist.log.tag.WCNSS_FILTER=WARNING
 ro.oem_unlock_supported=1
 
 # Radio
-ro.telephony.block_binder_thread_on_incoming_calls=false
 ro.telephony.call_ring.multiple=false
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
