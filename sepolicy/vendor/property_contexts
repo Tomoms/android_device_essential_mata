@@ -16,6 +16,9 @@ vendor.powerhal.init u:object_r:power_prop:s0
 vendor.powerhal.rendering u:object_r:power_prop:s0
 vendor.powerhal.state u:object_r:power_prop:s0
 
+# Iwlan
+persist.vendor.iwlan.logging.logcat u:object_r:vendor_cnd_vendor_prop:s0
+
 # public_vendor_default_prop
 # They are public_vendor_default_props for vendor-specific extension.
 # Usually they are for vndk-sp libs and vendor apks.
