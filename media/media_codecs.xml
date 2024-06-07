@@ -142,7 +142,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-3840x2160" value="30" />
             <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-1280x720" value="240" />
@@ -160,7 +160,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="489600" />
             <Limit name="bitrate" range="1-60000000" />
             <Limit name="frame-rate" range="1-240" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-1920x1080" value="60" />
             <Limit name="performance-point-1280x720" value="120" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
@@ -175,7 +175,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="48600" />
             <Limit name="bitrate" range="1-2000000" />
             <Limit name="frame-rate" range="1-240" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-864x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
             <Limit name="performance-point-720x480" value="30" />
@@ -191,7 +191,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-3840x2160" value="30" />
             <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-1280x720" value="240" />
@@ -208,7 +208,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-3840x2160" value="30" />
             <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-1280x720" value="240" />
@@ -228,7 +228,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-4096x2160" value="56" />
             <Limit name="performance-point-3840x2160" value="60" />
             <Limit name="performance-point-1920x1080" value="240" />
@@ -260,7 +260,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-60000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-1920x1080" value="60" />
             <Limit name="performance-point-1280x720" value="120" />
         </MediaCodec>
@@ -274,7 +274,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-2000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-864x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
             <Limit name="performance-point-720x480" value="30" />
@@ -289,7 +289,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-3840x2160" value="30" />
             <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-1280x720" value="240" />
@@ -304,7 +304,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-3840x2160" value="30" />
             <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-1280x720" value="240" />
@@ -335,7 +335,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-240" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="24" />
             <Limit name="performance-point-4096x2160" value="56" />
             <Limit name="performance-point-3840x2160" value="60" />
             <Limit name="performance-point-1920x1080" value="240" />
