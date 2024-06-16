@@ -193,6 +193,8 @@ on init
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq
 
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
 
@@ -202,6 +204,8 @@ on init
     chmod 0664 /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
     chmod 0664 /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
     chmod 0664 /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq
+
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
     # Setup all the sub-system as related
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
