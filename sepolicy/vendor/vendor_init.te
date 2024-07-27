@@ -16,6 +16,7 @@ get_prop(vendor_init, persist_touchscreen_prop)
 ## neverallow
 #get_prop(vendor_init, radio_prop)
 set_prop(vendor_init, camera_prop)
+set_prop(vendor_init, power_prop)
 set_prop(vendor_init, vendor_qcom_ims_prop)
 set_prop(vendor_init, vendor_alarm_boot_prop)
 set_prop(vendor_init, vendor_camera_prop)
