@@ -382,7 +382,7 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # UFFD GC
-OVERRIDE_ENABLE_UFFD_GC := false
+OVERRIDE_ENABLE_UFFD_GC := true
 
 # USB
 PRODUCT_PACKAGES += \
