@@ -6,6 +6,7 @@
 /dev/block/platform/soc/1da4000.ufshc/by-name/system    /system            ext4   ro,barrier=1                                     wait,slotselect,first_stage_mount
 /dev/block/platform/soc/1da4000.ufshc/by-name/vendor    /vendor            ext4   ro,barrier=1                                     wait,slotselect,first_stage_mount
 /dev/block/platform/soc/1da4000.ufshc/by-name/userdata  /data              ext4   noatime,nosuid,nodev,barrier=1,noauto_da_alloc   latemount,wait,check,formattable,fileencryption=ice,quota
+/dev/block/platform/soc/1da4000.ufshc/by-name/userdata  /data              f2fs   noatime,nosuid,nodev,nodiratime,discard,fsync_mode=nobarrier,inline_xattr,inline_data,data_flush   latemount,wait,check,formattable,length=-16384
 /dev/block/platform/soc/1da4000.ufshc/by-name/misc      /misc              emmc   defaults                                         defaults
 /dev/block/platform/soc/1da4000.ufshc/by-name/modem     /vendor/firmware_mnt vfat ro,shortname=lower,uid=1000,gid=1000,dmask=222,fmask=333,context=u:object_r:firmware_file:s0 wait,slotselect
 /dev/block/platform/soc/1da4000.ufshc/by-name/dsp       /vendor/dsp        ext4   ro,nosuid,nodev,barrier=1,context=u:object_r:adsprpcd_file:s0 wait,slotselect
