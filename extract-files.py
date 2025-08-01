@@ -61,9 +61,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libgui_shim.so')
         .add_needed('libui_shim.so')
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
-    'vendor/bin/hw/android.hardware.drm@1.2-service.widevine': blob_fixup()
-        .replace_needed('libhidltransport.so', 'libhidlbase.so')
-        .remove_needed('libhwbinder.so'),
     ('vendor/bin/hbtp_daemon',
      'vendor/lib/vendor.qti.hardware.improvetouch.blobmanager@1.0_vendor.so',
      'vendor/lib/vendor.qti.hardware.improvetouch.gesturemanager@1.0_vendor.so',
@@ -89,8 +86,6 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('20 68 D9 F7 08 EC', '00 20 D9 F7 08 EC'),
     ('vendor/lib/libtrueportrait.so', 'vendor/lib64/libtrueportrait.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    'vendor/lib64/libwvhidl.so': blob_fixup()
-        .add_needed('libcrypto_shim.so'),
     ('recovery/root/vendor/bin/hbtp_daemon',
      'recovery/root/vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so'): blob_fixup()
         .remove_needed('libhidltransport.so')
