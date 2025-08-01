@@ -505,7 +505,6 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.mata
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 
 # GNSS - from FP3 - 6.A.031.2
@@ -673,7 +672,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|460e589128fce
 vendor/bin/msm_irqbalance
 
 # Keystore
-vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 
 # Listen
