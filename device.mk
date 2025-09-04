@@ -17,6 +17,8 @@
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/essential/mata/overlay \
