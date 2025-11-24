@@ -112,6 +112,9 @@ vendor.gralloc.enable_fb_ubwc=1
 # Hardware Composer
 ro.hardware.hwcomposer=qcom
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
