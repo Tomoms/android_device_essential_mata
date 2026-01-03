@@ -93,7 +93,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -232,7 +232,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm \
     vendor.lineage.livedisplay-service.sysfs
 
-$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
