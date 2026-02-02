@@ -6,9 +6,6 @@ audio.offload.video=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
-# BPF
-ro.bpf.kver_override=5.4.299
-
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.heapgrowthlimit=256m
@@ -21,6 +18,9 @@ dalvik.vm.heapmaxfree=8m
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.layer_caching_active_layer_timeout_ms=1000
+
+# eBPF
+ro.bpf.kver_override=5.4.299
 
 # Factory reset partition
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
