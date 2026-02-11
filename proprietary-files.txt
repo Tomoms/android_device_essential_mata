@@ -218,8 +218,8 @@ system/media/audio/ui/VideoStop.ogg:product/media/audio/ui/VideoStop.ogg
 system/media/audio/ui/camera_click.ogg:product/media/audio/ui/camera_click.ogg
 system/media/audio/ui/camera_focus.ogg:product/media/audio/ui/camera_focus.ogg
 
-# Camera - libc (MALLOC_SVELTE) - built by hand each Android version
-system/lib64/libd.so;DISABLE_CHECKELF|4d6637d2b94f3dd0b2c6ff9143d92703f1f7d559
+# Camera - libc (MALLOC_LOW_MEMORY) - built by hand each Android version
+system/lib64/libd.so;DISABLE_CHECKELF|2f3c72f6a36c19768b5c0b369c057841398edb30
 
 # Camera - Chromatix
 vendor/lib/libchromatix_csidtg_common.so
