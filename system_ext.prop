@@ -20,6 +20,7 @@ dalvik.vm.heapmaxfree=8m
 
 # Display
 debug.sf.enable_hwc_vds=1
+debug.sf.layer_caching_active_layer_timeout_ms=1000
 
 # Factory reset partition
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
