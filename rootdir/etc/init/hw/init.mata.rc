@@ -582,9 +582,6 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
-on property:vold.decrypt=trigger_restart_framework
-    start vendor.wcnss-service
-
 # Services begin here
 
 service vendor.adsprpcd /vendor/bin/adsprpcd
