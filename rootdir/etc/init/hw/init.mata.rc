@@ -664,8 +664,7 @@ service vendor.pd_mapper /vendor/bin/pd-mapper
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
-    group system
-    ioprio rt 4
+    group system net_raw
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
