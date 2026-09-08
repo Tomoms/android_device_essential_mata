@@ -65,9 +65,6 @@ vendor/lib64/soundfx/libshoebox.so
 # Bluetooth
 vendor/lib64/libbtnv.so
 
-# Bluetooth - Edited by hand to swap properties and migrate /system -> /vendor
-vendor/bin/wcnss_filter|f5200a7b804a16c46803ff17af0cbc162c45a19e
-
 # Bluetooth - Firmware
 vendor/firmware/crbtfw11.tlv
 vendor/firmware/crbtfw20.tlv
