@@ -15,6 +15,10 @@ vendor/lib/libfastcvopt.so;DISABLE_CHECKELF
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
+# ANT+ - from Zebra helios-user-14-14-23-05.00-UG-U05-STD-HEL-04-5-release-keys
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|b51c11049f173f10d896b5a2460abbc5e14b0c04
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|d81c62439958c309c34bc96bf63232fa3a6481b5
+
 # Audio
 vendor/etc/acdbdata/Mata/Mata_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Mata/Mata_General_cal.acdb
@@ -62,8 +66,21 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
-# Bluetooth
-vendor/lib64/libbtnv.so
+# Bluetooth - from Zebra helios-user-14-14-23-05.00-UG-U05-STD-HEL-04-5-release-keys
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a24970b670e52e3df882a36b957caa81a17f1e90
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|6d0a838e5aa52773b068f2800b01943a6ae5b209
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|b25aaa4a7ce7cf72e67de3725d3c8b09aaa5e09e
+vendor/lib64/libbt-hidlclient.so|4f238bb08d5dbab9c018d03e47d4f2d43e667532
+vendor/lib64/libbtnv.so|d412e0511c79599cdb010a18f97111e0283759e8
+vendor/lib64/libsoc_helper.so|4f00ed77a590817651ea3eb9c93d987ef15bf9e7
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|475311f05f103b23654253e1dc86bdc5fcc8809a
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|f191bd8bb067e57a06af89ce2f9a9ea703bb2516
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|12c1ca37da7c6628f7b09cb3865818f72b8fef68
+
+# Bluetooth - from Fairphone/FP3/FP3:13/6.A.040.2/gms-d33dc62f:user/release-keys
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
 
 # Bluetooth - Firmware
 vendor/firmware/crbtfw11.tlv
