@@ -95,13 +95,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 $(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-mata:64 \
-    android.hardware.bluetooth@1.0-service \
-    android.hardware.bluetooth@1.0.vendor \
-    libbt-vendor
-
 # Camera
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
@@ -349,7 +342,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/bt/libbt-vendor \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
