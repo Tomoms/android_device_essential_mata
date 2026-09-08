@@ -505,8 +505,8 @@ vendor/lib64/libsdsprpc.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.mata
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8998.so
+# Gatekeeper - from Zebra helios-user-14-14-23-05.00-UG-U05-STD-HEL-04-5-release-keys
+vendor/lib64/hw/gatekeeper.sdm660.so:vendor/lib64/hw/gatekeeper.msm8998.so;FIX_SONAME|d760257a98254b9e87ae258e267b1a45a0ed7ecb|58063798ec6d09925915f45f08985def09e08121
 
 # GNSS - from FP3 - 6.A.040.2
 vendor/bin/loc_launcher|923d85bd727fb809b43fa86adbf739dd2b55285c
@@ -672,8 +672,8 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|460e589128fce
 # IRQ balance
 vendor/bin/msm_irqbalance
 
-# Keystore
-vendor/lib64/hw/keystore.msm8998.so
+# Keystore - from Zebra helios-user-14-14-23-05.00-UG-U05-STD-HEL-04-5-release-keys
+vendor/lib64/hw/keystore.sdm660.so:vendor/lib64/hw/keystore.msm8998.so;FIX_SONAME|919057c8178837f8ae563056ee4bb326f84cd67e|2f6980a247daa3038e2d5fc66b09debeea1833e1
 
 # Listen
 vendor/lib/libadpcmdec.so
