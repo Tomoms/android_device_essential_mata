@@ -184,6 +184,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libhidlbase-v32.recovery
 
+
+# HotwordEnrollement
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-google-product-hotwordenrollment.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product-hotwordenrollment.xml
+
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mata:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mata \
