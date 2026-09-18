@@ -121,6 +121,7 @@ BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
 VENDOR_SECURITY_PATCH := 2020-02-05
 
 # SELinux
+include device/lineage/sepolicy/libion/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include hardware/sony/timekeep/sepolicy/SEPolicy.mk
