@@ -134,9 +134,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm-V1-ndk.vendor
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
+# Fastbootd
+TARGET_DISABLE_FASTBOOTD := true
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
