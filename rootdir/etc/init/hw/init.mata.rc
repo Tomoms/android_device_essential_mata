@@ -214,6 +214,7 @@ on init
 
 on fs
     mount_all /vendor/etc/fstab.mata --early
+    mount tmpfs tmpfs /metadata size=10m
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
